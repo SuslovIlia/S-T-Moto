@@ -1,0 +1,319 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+p{
+    text-decoration: none;
+    font-weight: 300;
+}
+
+/* === Основные стили шапки === */
+.header {
+    background: white;
+    padding: 10px 0;
+    /* border-bottom: 2px solid black; */
+}
+
+/* === Гамбургер-меню === */
+.hamburger {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20px;
+    height: 15px;
+    cursor: pointer;
+    z-index: 1000;  Убедитесь, что гамбургер находится сверху */
+    display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 20px;
+            height: 15px;
+            cursor: pointer;
+  }
+  
+  .hamburger span {
+    /* display: block;
+    height: 2px;
+    width: 100%;
+    background: black; */
+
+    display: block;
+            height: 3px;
+            width: 100%;
+            background: black;
+            transition: 0.3s;
+  }
+
+  /* ......Бургер меню ................. */
+  .burger_open{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    background-color: #ffffff;
+    padding: 20px 16px;
+    z-index: 11;
+    transform: translateX(-39rem);
+    opacity: 0;
+    transition: all 0.8s;
+    height: 100%;
+}
+
+.add_burger {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.zagolovok-burger_open{
+    display: flex;
+    align-items: center;
+    column-gap: 2rem;
+    margin-bottom: 2rem;
+}
+.a_burger{
+    display: block;
+    padding: 0.8rem 1.6rem;
+    text-decoration: none;
+    font-size: 2rem;
+    color: #353030;
+    border: solid black 1px;
+    border-radius: 5px;
+    margin: 10px;
+}
+.a_burger:hover{
+    background-color: #a9a9a9;
+}
+.close_burger{
+    position: absolute;
+    top: 10px;
+    right: -50px;
+    /* font-size: 18px; */
+    /* background-color: rgba(0, 0, 0, 0.2); */
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.close_burger:hover{
+    background-color: #8d8d8d;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #67686e63;
+    z-index: 10;
+  }
+  
+  .hidden {
+    display: none;
+  }
+
+  .pay_my_worck{
+    margin-left: 40px;
+    margin-top: 20px;
+    background-color: rgb(51, 172, 51);
+    border: none;
+    border-radius: 10px;
+    padding: 7px;
+  }
+  .pay_my_worck:hover{
+    background-color: rgb(49, 238, 49);
+    padding: 8px;
+  }
+
+/* === Логотип ============================== */
+.logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    margin: 15px 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+}
+.logo-short {
+    margin: 15px 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    display: none;
+  }
+  
+  /* Медиа-запрос для экранов шириной менее 800px */
+  @media (max-width: 800px) {
+    .logo {
+      display: none; /* Скрывает полный логотип */
+    }
+    .logo-short {
+      display: flex; /* Показывает сокращенную версию */
+    }
+  }
+
+/* === Поисковая строка === */
+.search-form {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.search-input {
+    flex: 1;
+    border: none;
+    padding: 8px 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-button {
+    background: none;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* === Иконка профиля === */
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border: 2px solid green;
+    border-radius: 50%;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+}
+
+
+/* ........................................ */
+.popular{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 250px;
+    border: 1px solid rgb(24, 170, 24);
+    border-radius: 10px;
+    padding: 5px 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    color: green;
+}
+
+/* ============================= */
+.card{
+    margin: 30px 0;
+}
+.btn{
+    margin-left: auto;
+}
+.hit{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 250px;
+    border: 1px solid rgb(24, 170, 24);
+    border-radius: 10px;
+    padding: 5px 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    color: rgb(0, 153, 255);
+}
+
+.never-cards{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 250px;
+    border: 1px solid orange;
+    border-radius: 10px;
+    padding: 5px 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    color: black;
+    background-color: orange;
+}
+.never-cards:hover{
+    background-color: rgb(255, 183, 50);
+    border: 1px solid orange;
+    cursor: pointer;
+}
+
+/* Кнопка "Наверх" */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    transition: opacity 0.3s, transform 0.3s;
+    opacity: 0;
+    transform: scale(0);
+    z-index: 1000;
+}
+
+.scroll-to-top.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* //////////// */
+.photo-container {
+    margin-top: 50px;
+    opacity: 0; /* По умолчанию скрыто */
+    transform: translateY(-100px); /* Сдвигаем вверх */
+    transition: opacity 0.8s ease-out, transform 2s ease-out;
+}
+
+.photo-container.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.photo-item {
+    margin: 10px;
+}
+
+img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.icon-mail-alt:hover{
+    color: blue;
+}
+
+/* ---------Регестрация (форма)------------ */
+.dropdown-item{
+    margin-bottom: 10px;
+}
+.dropdown-item:hover{
+    background-color: #bababa;
+}
+
+
+  

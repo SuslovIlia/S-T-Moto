@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css.css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="/css.css/css.css">
+    <title>S-T-Moto</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="row align-items-center">
+                
+                <!-- Гамбургер и логотип (1 колонка) -->
+                <div class="col-lg-2 d-flex align-items-center col-4">
+                    <div class="hamburger me-2" id="menuToggle">
+                        <span class="span"></span>
+                        <span class="span"></span>
+                        <span class="span"></span>
+                    </div>
+                    <span class="logo">SBOR-TOPMOTO</span>
+                    <span class="logo-short">STM</span>
+                </div>
+                <!-- Поисковая строка (8 колонок) -->
+                <div class="col-6 col-lg-9">
+                    <form class="search-form">
+                        <input type="text" class="search-input" placeholder="Поиск...">
+                        <button type="submit" class="search-button">🔍</button>
+                    </form>
+                </div>
+    
+                <!-- Иконка профиля (1 колонка) -->
+                <div class="col-2 col-lg-1 text-end" style="display: flex; justify-content: right;">
+                    <!-- <div class="profile">Я</div> -->
+                    <div class="dropdown">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: green;">
+                          Я
+                        </a>
+                      
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item"  id="buttom_vhod" style="display: block;" >Войти</a></li>
+                          <li><a class="dropdown-item" href="/otzov/otzov.html " style="color: rgb(255, 194, 10);" target="_blank">Оставить отзов</a></li>
+                          <div id="userInfo" ></div>
+                        <button id="clearData" class="btn btn-danger"> Выйти</button>
+                        </ul>
+                      </div>
+
+                </div>
+    
+            </div>
+        </div>
+    </header>
+    <nav class="burger_open">
+        <div class="zagolovok-burger_open">
+            <h2 class="h2">Sbor-TopMoto</h2>
+        </div>
+        <a href="" class="a_burger">Питбайки</a>
+        <a href="" class="a_burger">Эндуро</a>
+        <a href="" class="a_burger">Дорожные</a>
+        <a href="" class="a_burger">Квадроциклы</a>
+        <a href="" class="a_burger">Снегоходы</a>
+        <a href="" class="a_burger">Экипировка</a>
+        <button class="pay_my_worck">Поддержать автора</button>
+        <button class="close_burger">&#10008;</button>
+    </nav>
+
+    <div class="overlay hidden" ></div> 
+    
+
+    <button id="scrollToTop" class="scroll-to-top">↑</button>
+
+    <!-- ----------------------Регистрация и все прочее------------------------------ -->
+    <div class="container" style="display: none;" id="container_whod">
+        <div class="row">
+            <div class="col-12">
+                <form id="loginForm">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Ваше имя</label>
+                        <input type="text" class="form-control" id="user_name">
+                      </div>
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Адрес электронной почты</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      <div id="emailHelp" class="form-text">Мы никогда никому не передадим вашу электронную почту.</div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Пароль</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Сохранить</button>
+                  </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- ------------------Карточки ----------------------------------  -->
+
+
+    <section class="tovar_glav">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-12" style="width: 100%;">
+                    <h3 class = "popular">Популярное</h3>
+                </div>
+
+                <div class="col-12 col-lg-4" style="display: flex;" >
+
+                    <div class="card" >
+                        <img src="/img/brx_1.jpg" class="card-img-top" alt="Фото мотоцикла">
+                        <div class="card-body">
+                            <h5 class="card-title">Эндуро BRZ H6 PR250 21/18</h5>
+                            <p class="card-text">Этот мотоцикл оснащен надежным двигателем ZONGSHEN ZS172FMM-5A с балансировочным валом и карбюратором Nibbi Racing PE30, что обеспечивает превосходную мощность и тягу.</p>
+                            <div class="oformlenie" style="display: flex;">
+                                <p class="cena" style="color: green; margin-right: 30px;">199 990 руб.</p>
+                                <a href="#" class="btn btn-primary">Подробнее...</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-4" style="display: flex;" >
+
+                    <div class="card">
+                        <img src="/img/SSSR 125.jpg" class="card-img-top" alt="Фото питбайка">
+                        <div class="card-body">
+                            <h5 class="card-title">Питбайк SSSR CORE 125 SA 17/14</h5>
+                            <p class="card-text">Питбайк оснащен 125-кубовым двигателем, мощность которого достигает 9,7 л. с. Агрегат с воздушным охлаждением и четырехступенчатой коробкой характеризуется экономичностью, расходуя 3 л на 100 км.</p>
+                            <div class="oformlenie" style="display: flex;">
+                                <p class="cena" style="color: green; margin-right: 30px;">70 990 руб.</p>
+                                <a href="#" class="btn btn-primary">Подробнее...</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-12 col-lg-4" style="display: flex;" >
+
+                    <div class="card" >
+                        <img src="img/Квадоцикл ATV 300 .png" class="card-img-top" alt="Фото квадроцикла">
+                        <div class="card-body">
+                            <h5 class="card-title">Квадроцикл ATV ZONGSHEN TUNDRA 4Х4 300СС</h5>
+                            <p class="card-text">Самый бюджетный квадроцикл в котегории полноприводных. </p>
+                            <div class="oformlenie" style="display: flex;">
+                                <p class="cena" style="color: green; margin-right: 30px;">310 000 руб.</p>
+                                <a href="#" class="btn btn-primary">Подробнее...</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-12" style="width: 100%;">
+                    <h3 class = "hit">Хит зимы</h3>
+                </div>
+
+
+                <div class="col-12 col-lg-4" style="display: flex;" >
+
+                    <div class="card" >
+                        <img src="img/снегоход бурлак.jpg" class="card-img-top" alt="Фото снегохода">
+                        <div class="card-body">
+                            <h5 class="card-title">Снегоход Бурлак АЗИМУТ-2 27 л.с.</h5>
+                            <p class="card-text"> Бюджетный снегоход Российского производства. Подходит для решения бытовых задачь за городом и веселого времяпровождения. Производитель:Бурлак.
+                                Ширина гусеницы:500 мм.
+                                Мощность двигателя:27лс.
+                                Трансмиссия:Вариатор.
+                                Масса:234 кг.</p>
+                            <div class="oformlenie" style="display: flex;">
+                                <p class="cena" style="color: green; margin-right: 30px;">390 000 руб.</p>
+                                <a href="#" class="btn btn-primary">Подробнее...</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-4" style="display: flex;" >
+
+                    <div class="card" >
+                        <img src="img/мотособака (буксировщик).jpg" class="card-img-top" alt="Фото мотособаки">
+                        <div class="card-body">
+                            <h5 class="card-title">Мотобуксировщик Нева МС1- ZS (GB225).</h5>
+                            <p class="card-text"> Мотобуксировщик «НЕВА» МС1-ZS (GB225) предназначен для передвижения людей на прицепных санях к месту зимней рыбалки, а также перевозки небольшого груза по льду, твердому снегу, насту или неглубокой снежной целине (до 25 см). </p>
+                            <div class="oformlenie" style="display: flex;">
+                                <p class="cena" style="color: green; margin-right: 30px;">80 000 руб.</p>
+                                <a href="#" class="btn btn-primary">Подробнее...</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-12 col-lg-4" style="display: flex;" >
+
+                    <div class="card" >
+                        <img src="img/motosnegokat.jpg" class="card-img-top" alt="Фото ">
+                        <div class="card-body">
+                            <h5 class="card-title">Мотоснегокат СНЕГИРЬ 7 л.с..</h5>
+                            <p class="card-text"> Бензиновые снегокаты СНЕГИРЬ отлично подойдут любителям активного отдыха в зимнее время, также будут интересны охотникам и рыбакам, благодаря возможности буксировки саней, "ватрушки". Снегоход оснащен бензиновым двигателем мощностью 7 л.с., вариатором Форвард и гусеницей шириной 380мм. </p>
+                            <div class="oformlenie" style="display: flex;">
+                                <p class="cena" style="color: green; margin-right: 30px;">135 000 руб.</p>
+                                <a href="#" class="btn btn-primary">Подробнее...</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="container" id="info-glav" style="display: flex ; justify-content: center ; text-align: center;">
+                    <div class="row">
+                        <div class="col-12">
+                            <button type="button" class="btn btn-primary" id="liveToastBtn" style="background-color: white; border: none;  ">
+                                <div class="col-12" style="width: 100%;">
+                                    <h3 class = "never-cards">Показать ещё
+                                    </h3>
+                                </div>  
+                            </button>
+                                <div class="toast-container position-fixed bottom-0 end-0 p-3" >
+                                    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                                        <div class="toast-header">
+                                        <img src="/img/admin-removebg-preview (1).png" class="rounded me-2" alt="..." style="width: 30px; height: 30px;  " >
+                                        <strong class="me-auto">sbor-topmot</strong>
+                                        <small>1 минуту назад</small>
+                                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Закрыть"></button>
+                                        </div>
+                                        <div class="toast-body">
+                                        <p>Не хотите ли бы вы оставить отзыв о нашем сайте? <button style="border: none;"><a href="/otzov/otzov.html" target="_blank">> Здесь ></a></button></p>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12" style="width: 100%; display: none;"id="delit-never-cards" >
+                    <h3 class = "never-cards" >Скрыть
+                    </h3>
+                </div>
+
+
+
+
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="tovar_glav_dop" style="display: none;">
+        <div class="container">
+            <div class="row">
+                <!-- ----------------------------ПОКАЗАТЬ ЕЩЕЕ----------------------- -->
+
+                <div class="col-12 col-lg-4" style="display: flex;" >
+
+                    <div class="card" >
+                        <img src="img/деткий пит.png" class="card-img-top" alt="Фото ">
+                        <div class="card-body">
+                            <h5 class="card-title">Детский питбайк Orion (Avantis) 50cc</h5>
+                            <p class="card-text"> Предназначен для детей в возрасте от 5-10 лет. Юный водитель будет в восторге от подарка, независимо от повода, будь это День Рождения или просто так. </p>
+                            <div class="oformlenie" style="display: flex;">
+                                <p class="cena" style="color: green; margin-right: 30px;">28 000 руб.</p>
+                                <a href="#" class="btn btn-primary">Подробнее...</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-4" style="display: flex;" >
+
+                    <div class="card" >
+                        <img src="img/пит190.jpg" class="card-img-top" alt="Фото ">
+                        <div class="card-body">
+                            <h5 class="card-title">Мотоцикл BRZ X4 190 19/16 (ZS190e)</h5>
+                            <p class="card-text"> Сердцем этого мотоцикла является двигатель ZS190, который обеспечивает динамичную и уверенную езду. Четырехступенчатая коробка передач гарантирует отличную отзывчивость и контроль. Топливный фильтр обеспечивает чистоту топлива и длительный срок службы двигателя. Его небольшой вес способствует исключительной маневренности. Стальная пространственная рама гарантирует прочность и долговечность. </p>
+                            <div class="oformlenie" style="display: flex;">
+                                <p class="cena" style="color: green; margin-right: 30px;">184 900 руб.</p>
+                                <a href="#" class="btn btn-primary">Подробнее...</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-12 col-lg-4" style="display: flex;" >
+
+                    <div class="card" >
+                        <img src="img/эндуро птс.jpg" class="card-img-top" alt="Фото ">
+                        <div class="card-body">
+                            <h5 class="card-title">KAYO T2 300 Enduro PR (2023) птс</h5>
+                            <p class="card-text"> Надёжный, производительный и компактный мотоцикл, который идеально подходит для любителей экстрима и езды по бездорожью. Модель обладает высокими характеристиками, производительным двигателем и прочной конструкцией, которая позволяет ей справляться с непростыми условиями маршрутов как на кроссовых трассах, так и в хард-эндуро. </p>
+                            <div class="oformlenie" style="display: flex;">
+                                <p class="cena" style="color: green; margin-right: 30px;">196 900 руб.</p>
+                                <a href="#" class="btn btn-primary">Подробнее...</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="tovar_glav">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-6" style="display: flex;" >
+
+                    <div class="card" >
+                     <img src="img/экип 1.jpg" class= "card-img-top" alt="Фото " style="height: 600px; ">
+                     <div class="card-body">
+                            <h5 class="card-title">Leatt Moto 3.5 Ride Kit</h5>
+                            <p class="card-text">Комплект Leatt Moto 3.5 Ride Kit предлагает исключительное сочетание стиля, комфорта и долговечности. В комплект входят как джерси, так и штаны по доступной цене.
+                                <hr>
+                                Джерси изготовлено из эластичной сетчатой 3D-ткани, обеспечивающей оптимальную вентиляцию для сохранения прохлады в любых условиях. Индивидуальный крой позволяет кататься как с защитным жилетом, так и без него, что делает комплект универсальным выбором для райдеров любого уровня.
+                                 <hr>
+                                 Брюки имеют артикулированный классический крой для большего комфорта и легкости движений. Правая штанина имеет мягкие накладки на внутренне стороне колена для дополнительной защиты и комфорта. 
+                            </p>
+                            <div class="oformlenie" style="display: flex;">
+                                <p class="cena" style="color: green; margin-right: 30px;">9 989 руб.</p>
+                                <a href="#" class="btn btn-primary">Подробнее...</a>
+                    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-6" style="display: flex;" >
+
+                    <div class="card" >
+                     <img src="img/экип 2.png" class= "card-img-top" alt="Фото ">
+                     <div class="card-body">
+                         <h5 class="card-title">Минимальный набор защиты</h5>
+                         <p class="card-text">Даже такая защита будет в 100 раз эффективней, чем футоболка с шортами. Мотозащита для мотоцикла и питбайка — важная часть экипировки каждого байкера. Особенно когда речь идет о мотоспорте, мотокроссе или эндуро. Защитные элементы обеспечивают безопасность как взрослых, так и подростков при катаниях на квадроцикле или питбайке. Мотоэкипировка включает защитный жилет панцирь для торса и дополнительные элементы защиты тела. Регулятор креплений обеспечивает удобство использования. Фиксатор наколенники и налокотники защищают суставы ног и рук от ударов при падении. </p>
+                            <div class="oformlenie" style="display: flex;">
+                             <p class="cena" style="color: green; margin-right: 30px;">3 348 руб.</p>
+                                <a href="#" class="btn btn-primary">Подробнее...</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> 
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-12" style="width: 100%;">
+                    <h4 style="display: flex; text-align: center; justify-content: center; margin: 30px; ">Интересные факты</h4>
+                </div>
+
+
+                <div class="col-12">
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Былая слава
+                            </button>
+                          </h2>
+                          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                              <strong>Известно ли вам, что в свое время СССР занимал второе место по количеству производства мотоциклов за год после США? Увы, сейчас страны СНГ уже давно и заметно отстают по данному показателю.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Первый в истории
+                            </button>
+                          </h2>
+                          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                              <strong>Впервые мотоцикл был изобретен более 140 лет назад немецким изобретателем по имени Готтлиб Даймлер. Примечательно, что данный транспорт отличался деревянной рамой и простейшим бензиновым двигателем. К слову, «Днем Рождения» мототранспорта стоит считать 29 августа 1885 года.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Мотоврачи
+                            </button>
+                          </h2>
+                          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                              <strong>А знаете ли вы, что в Ирландии уже не первый год существует особый род врачей, что добираются до места происшествия на своем мототранспорте? Их мотоциклы способны развивать скорость до 290 км/ч, что позволяет максимально быстро добираться до места происшествия и оперативно оказывать медицинскую помощь. Правда, работает такая служба в основном на мотогонках.
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFore" aria-expanded="false" aria-controls="collapseFore">
+                                Как закопали «колесо войны»
+                              </button>
+                            </h2>
+                            <div id="collapseFore" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                              <div class="accordion-body">
+                                <strong> В начале 2000 года между ведущими компаниями-производителями мототранспорта была заключена договоренность об окончании «гонки скоростей», при которой постоянно велась борьба за наиболее быстрый байк в мире. Производители стали всерьез опасаться, что современные возможности мототранспорта относительно скорости разгона стали слишком опасны для водителей. В итоге был согласован максимальный лимит по скоростям в пределах 300 км/ч.
+                              </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    Важное изобретение
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong> Знаете ли вы, что мотоциклетные шлемы, как и прочая экипировка, появились далеко не сразу. Изначально никто и не задумывался о какой-либо особой одежде и средствах защиты для водителей мототранспорта. Позднее появились соответствующие очки и кожаные шапки. Современные шлемы для мотоциклистов изобрел нейрохирург Хью Кэрнс. Причиной тому стала гибель его близкого друга Лоренса Аравийского, что разбился на своем мотоцикле. </strong>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                    Эндуро гонка может длиться несколько дней
+                                </button>
+                            </h2>
+                            <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong> Соревнования по эндуро бывают многочасовыми или даже многодневными. Например, Red Bull Romaniacs — одно из самых сложных эндуро-ралли в мире, которое длится 5 дней и проходит в горах Румынии. </strong>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                    Самый сложный эндуро-марафон
+                                </button>
+                            </h2>
+                            <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong> "Эрцбергродео"
+                                        Каждый год в Австрии проходит Erzbergrodeo, одно из самых сложных эндуро-соревнований. Из 1500 участников до финиша добираются единицы! Это настоящая проверка силы, техники и выносливости. </strong>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </section> 
+
+    <section>
+        <div class="container">
+            <div class="row justify-content-center photo-container" id="photoGallery">
+                <div class="col-md-3 col-12 photo-item">
+                    <img src="/img/плакат 1.jpg" alt="Фото 1" >
+                </div>
+                <div class="col-md-3 col-12 photo-item">
+                    <img src="/img/плакат 2.jpg" alt="Фото 2" >
+                </div>
+                <div class="col-md-3 col-12 photo-item">
+                    <img src="/img/плакат 3.jpg" alt="Фото 3" >
+                </div>
+                <div class="col-12 justify-content-center text-center">
+                    <p>мотоспорт в наших сердцах </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+
+    <footer>
+        <div class="container"  style="background-color: rgb(216, 216, 216);">
+            <div class="row">
+                <div class="col-10" style="display: flex; justify-content: left;text-align: start;">
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=suslovilia2007@gmail.com&su=Запрос%20на%20курс&body=Здравствуйте%20Илья,%20хотелось%20бы%20подробнее%20узнать%20о%20курсе." target="_blank" style="color: black; text-decoration: none; "><i class="icon-mail-alt">suslovilia2007@gmail.com</i></a>
+                </div>
+
+                <div class="col-1" style="display: flex; justify-content: center;text-align: center;">
+                    <a href="https://vk.com/ilyasyslovv" target="_blank"><img src="/img/icons8-vk.gif" alt="vk" style="width: 25px; height: 25px;"></a>
+                </div>
+                <div class="col-1" style="display: flex; justify-content: center;text-align: center;">
+                    <a href="https://github.com/SuslovIlia" target="_blank"><img src="/img/icons8-github-64.png" alt="GitHub" style="width: 25px; height: 25px;"></a>
+                </div>
+            </div>
+
+            <div class="row" style="margin-top: 10px;">
+                <div class="col-6 col-md-3" >
+                    <p>Источники информаций</p>
+                    <ul>
+                        <li><a href="https://www.avantsb.ru/catalog/mototsikly/" target="_blank">avantsb.ru</a></li>
+                        <li><a href="https://www.wildberries.ru/" target="_blank">wildberries.ru</a></li>
+                        <li><a href="https://www.ozon.ru/" target="_blank">ozon.ru</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-md-3">
+                    <p>Помощь при создании</p>
+                    <ul>
+                        <li><a href="https://bootstrap-4.ru/docs/5.3/getting-started/introduction/" target="_blank">Bootstrap</a></li>
+                        <li><a href="https://icons8.ru/license" target="_blank">icons8.com</a></li>
+                        <li><a href="https://pixabay.com/ru/images/search/%d0%bc%d0%be%d1%82%d0%be%d0%ba%d1%80%d0%be%d1%81%d1%81/?pagi=2 " target="_blank">pixabay.com</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <p>Информация, размещенная на сайте, носит информационный характер и ни при каких условиях не является публичной офертой в соответствии со ст. 437 ГК РФ.
+                        Указание на возраст не может ни при каких условиях расценено как безусловная возможность эксплуатировать товар с указанного возраста. Лицо эксплуатирующее товара должно иметь соответствующие навыки и средства защиты.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js.js/js.js"></script>
+<script src="/js.js/bootstrap.min.js"></script>
+</body>
+</html>
