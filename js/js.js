@@ -3,6 +3,27 @@
 function delay(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
+// ------------------------------------Поиск карточек--------------------
+
+document.getElementById('searchInput').addEventListener('input', function() {
+    let filter = this.value.toLowerCase();
+    let cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+        let name = card.dataset.name.toLowerCase();
+        if (name.includes(filter)) {
+            card.style.display = '';
+        } else {
+            card.style.display = 'none';
+
+        }
+    });
+});
+
+document.querySelector('.search-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+});
+
+// --------------------------Показать уведомление----------------------------------
 
 document.getElementById('liveToastBtn').addEventListener('click', async function () {
     // Ждем 10 секунд перед тем, как показать тост
